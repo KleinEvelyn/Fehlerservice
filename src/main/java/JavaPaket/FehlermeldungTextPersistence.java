@@ -18,4 +18,10 @@ public class FehlermeldungTextPersistence implements FehlermeldungPersistence {
 
 	}
 
+	public void read(Fehlermeldung meldung) {
+		File myfile = new File("C:\\Users\\klein\\Fehlermeldungen");
+		//ergänzen
+
+	}
+
 }

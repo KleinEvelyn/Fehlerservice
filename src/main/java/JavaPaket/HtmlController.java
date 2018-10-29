@@ -19,10 +19,11 @@ public class HtmlController {
 
     @RequestMapping("/fehlerservice/")
     public String zeigeFehlerservice(Model model) {
-      String name = model.getName;
-      Long id = model.getId;
-      String kurztext = model.getKurztext;
-      String langtext = model.getLangtext;
+      //Fehlermed.read.... bei der Startseite
+      //Werte daraus in model rein
+      FehlermeldungTextPersistence.read();
+      
+
        // Template fehlerservice.html aufrufen
        return "fehlerservice";
     }
