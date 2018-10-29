@@ -1,5 +1,7 @@
 package JavaPaket;
 
+/*Deklariert die Variablen einer Fehlermeldung; get-Methoden*/
+
 public class Fehlermeldung {
 
 	private final String name;

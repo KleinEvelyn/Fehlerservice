@@ -7,13 +7,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- * Web-Controller für alle HTML-Seiten
- */
+
 @Controller
 public class HtmlController {
 
-    @RequestMapping("/")
+    @RequestMapping("/index/")
     public String zeigeStartseite(Model model) {
         // Template index.html aufrufen
         return "index";
@@ -21,8 +19,10 @@ public class HtmlController {
 
     @RequestMapping("/fehlerservice/")
     public String zeigeFehlerservice(Model model) {
-       // TODO: Daten einlesen und in "model" ablegen, damit sie im Template zur Verfügung stehen
-
+      String name = model.getName;
+      Long id = model.getId;
+      String kurztext = model.getKurztext;
+      String langtext = model.getLangtext;
        // Template fehlerservice.html aufrufen
        return "fehlerservice";
     }

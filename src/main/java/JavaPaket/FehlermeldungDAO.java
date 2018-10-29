@@ -1,11 +1,18 @@
 package JavaPaket;
 
+
+
+
 public class FehlermeldungDAO {
+
+	/*Wir erhalten die Informationen einer Fehlermeldung als String*/
 
 	public String getFehlermeldungString(Fehlermeldung meldung) {
 		return "" + meldung.getName() + "|" + meldung.getId() + "|" + meldung.getEingangsdatum() + "|"
 				+ meldung.getKurztext() + "|" + meldung.getLangtext();
 	}
+
+/*Konvertierung der String-Dateien in Objekte*/
 
 	public Fehlermeldung getFehlermeldungObject(String meldungstext) {
 		String[] splits = meldungstext.split("|");
