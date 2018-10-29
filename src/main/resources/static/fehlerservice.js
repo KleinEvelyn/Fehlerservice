@@ -1,3 +1,6 @@
+<!-- JavaScript-Code für die Anwendung -->
+
+
 /*Funktion für den Tabreiter*/
 function openTab(evt, tabName) {
 
