@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HtmlController {
 
-    @RequestMapping("/index/")
+    @RequestMapping("/")
     public String zeigeStartseite(Model model) {
         // Template index.html aufrufen
         return "index";
@@ -19,10 +19,10 @@ public class HtmlController {
 
     @RequestMapping("/fehlerservice/")
     public String zeigeFehlerservice(Model model) {
-      //Fehlermed.read.... bei der Startseite
-      //Werte daraus in model rein
-      FehlermeldungTextPersistence.read();
-      
+       // TODO: Daten einlesen und in "model" ablegen, damit sie im Template zur Verfügung stehen
+       String MeldungsInfo = "";
+      Fehlermeldung fehlermeldung = new Fehlermeldung();
+      fehlermeldung.getFehlermeldungObject(MeldungsInfo);
 
        // Template fehlerservice.html aufrufen
        return "fehlerservice";

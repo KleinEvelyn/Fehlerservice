@@ -18,10 +18,20 @@ public class FehlermeldungTextPersistence implements FehlermeldungPersistence {
 
 	}
 
-	public void read(Fehlermeldung meldung) {
-		File myfile = new File("C:\\Users\\klein\\Fehlermeldungen");
-		//ergänzen
+public String load()
+{
+    FileReader fr = new FileReader("C:\\Users\\klein\\Fehlermeldungen");
+    BufferedReader br = new BufferedReader(fr);
 
-	}
+    String MeldungsInfo = "";
+
+    while( (MeldungsInfo = br.readLine()) != null)
+    {
+      System.out.println(MeldungsInfo);
+    }
+
+    br.close();
+		return MeldungsInfo;
+  }
 
 }
